@@ -1,0 +1,1 @@
+(()=>{"use strict";!function(){const e=document.querySelector("#content"),t=document.createElement("h1");t.innerText="Yogushi",e.appendChild(t)}()})();
