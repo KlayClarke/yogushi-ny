@@ -2,6 +2,7 @@ import { yogaToggle, sushiToggle, locationsToggle } from "./tabs";
 
 export function pageLoad() {
   const content = document.querySelector("#content");
+
   const header = document.createElement("header");
   const footer = document.createElement("footer");
   const top = document.createElement("div");
@@ -35,14 +36,20 @@ export function pageLoad() {
 
   yogaBtn.addEventListener("click", function () {
     middle.classList.remove("middle-img");
+    middle.classList.add("showYoga");
+    yogaToggle(middle);
   });
 
   sushiBtn.addEventListener("click", function () {
     middle.classList.remove("middle-img");
+    middle.classList.add("showSushi");
+    sushiToggle(middle);
   });
 
   locationsBtn.addEventListener("click", function () {
     middle.classList.remove("middle-img");
+    middle.classList.add("showLocations");
+    locationsToggle(middle);
   });
 
   footer.innerHTML = "&#169 2022 Yogushi Group";
