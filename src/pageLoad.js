@@ -1,3 +1,5 @@
+import { yogaToggle, sushiToggle, locationsToggle } from "./tabs";
+
 export function pageLoad() {
   const content = document.querySelector("#content");
   const header = document.createElement("header");
@@ -15,7 +17,8 @@ export function pageLoad() {
   reservationLink.innerText = "Reserve A Mat";
 
   top.classList.add("top");
-  middle.classList.add("middle");
+  middle.classList.add("middle-img");
+  middle.classList.add("middle-space");
   bottom.classList.add("bottom");
 
   logo.innerHTML = "<h1>Yogushi</h1>";
@@ -25,6 +28,23 @@ export function pageLoad() {
   yogaBtn.innerText = "Yoga";
   sushiBtn.innerText = "Sushi";
   locationsBtn.innerText = "Locations";
+
+  logo.addEventListener("click", function () {
+    middle.classList.add("middle-img");
+  });
+
+  yogaBtn.addEventListener("click", function () {
+    middle.classList.remove("middle-img");
+  });
+
+  sushiBtn.addEventListener("click", function () {
+    middle.classList.remove("middle-img");
+  });
+
+  locationsBtn.addEventListener("click", function () {
+    middle.classList.remove("middle-img");
+  });
+
   footer.innerHTML = "&#169 2022 Yogushi Group";
 
   btnRow.appendChild(yogaBtn);

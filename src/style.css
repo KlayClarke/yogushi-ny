@@ -51,8 +51,12 @@ a:hover {
   font-weight: 700;
 }
 
-.middle {
+.middle-img {
   background-image: url("https://images.unsplash.com/photo-1615361200098-9e630ec29b4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3164&q=80");
+}
+
+.middle-space {
+  background-color: rgb(197, 72, 72);
   background-size: cover;
   background-position: 35%;
   min-height: 30em;
