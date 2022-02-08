@@ -14,7 +14,7 @@ export function pageLoad() {
   const sushiBtn = document.createElement("button");
   const locationsBtn = document.createElement("button");
   const reservationLink = document.createElement("a");
-
+  const tabBtns = [yogaBtn, sushiBtn, locationsBtn];
   reservationLink.innerText = "Reserve A Mat";
 
   top.classList.add("top");
@@ -24,11 +24,19 @@ export function pageLoad() {
 
   logo.innerHTML = "<h1>Yogushi</h1>";
   logo.classList.add("logo");
-  logo.classList.add("active");
 
   yogaBtn.innerText = "Yoga";
   sushiBtn.innerText = "Sushi";
   locationsBtn.innerText = "Locations";
+
+  tabBtns.forEach((btn) =>
+    btn.addEventListener("click", function () {
+      document
+        .querySelectorAll("button")
+        .forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+    })
+  );
 
   logo.addEventListener("click", function () {
     middle.classList.add("middle-img");
