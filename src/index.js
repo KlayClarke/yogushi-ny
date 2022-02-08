@@ -1,1 +1,4 @@
-console.log("This is it");
+import "./style.css";
+import { pageLoad } from "./pageLoad";
+
+pageLoad();
