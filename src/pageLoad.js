@@ -6,7 +6,7 @@ export function pageLoad() {
   const middle = document.createElement("div");
   const bottom = document.createElement("div");
   const btnRow = document.createElement("div");
-  const logo = document.createElement("h1");
+  const logo = document.createElement("a");
   const yogaBtn = document.createElement("button");
   const sushiBtn = document.createElement("button");
   const locationsBtn = document.createElement("button");
@@ -18,8 +18,9 @@ export function pageLoad() {
   middle.classList.add("middle");
   bottom.classList.add("bottom");
 
-  logo.innerText = "Yogushi";
+  logo.innerHTML = "<h1>Yogushi</h1>";
   logo.classList.add("logo");
+  logo.classList.add("active");
 
   yogaBtn.innerText = "Yoga";
   sushiBtn.innerText = "Sushi";

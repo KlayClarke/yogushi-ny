@@ -12,9 +12,8 @@ header {
 }
 
 footer {
-  background-color: rgb(184, 88, 88);
-  color: white;
   bottom: 0%;
+  color: rgb(185, 145, 71);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,6 +38,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.active {
+  text-decoration: underline;
+}
+
 .top {
   background-color: white;
 }
@@ -57,7 +60,7 @@ a:hover {
 
 .bottom {
   gap: 2em;
-  background-color: rgb(172, 148, 105);
+  background-color: rgb(185, 145, 71);
   min-height: 6em;
   display: flex;
   align-items: center;
