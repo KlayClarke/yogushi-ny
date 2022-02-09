@@ -52,9 +52,24 @@ export function yogaToggle(div) {
 export function sushiToggle(div) {
   function render() {
     div.innerHTML = "";
-    const header = document.createElement("h1");
-    header.innerText = "I am header for Sushi tab";
-    div.appendChild(header);
+    const menuDiv = document.createElement("div");
+    const menuItems = [
+      "<h3>Sashimi, $15 per serving</h3>",
+      "<h3>Nigri, $12 per serving</h3>",
+      "<h3>Octopus, $18 per serving</h3>",
+      "<h3>Salmon, $12 per serving</h3>",
+      "<h3>Scallops, $13 per serving</h3>",
+      "<h3>Yellowtail, $7 per serving</h3>",
+    ];
+
+    menuItems.forEach(function (el) {
+      const text = document.createElement("div");
+      text.classList.add("menu-item");
+      text.innerHTML = el;
+      menuDiv.appendChild(text);
+    });
+
+    div.appendChild(menuDiv);
   }
   render();
 }
