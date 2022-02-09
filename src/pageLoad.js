@@ -1,8 +1,7 @@
-import { yogaToggle, sushiToggle, locationsToggle } from "./tabs";
+import { yogaToggle, sushiToggle } from "./tabs";
 
 export function pageLoad() {
   const content = document.querySelector("#content");
-
   const header = document.createElement("header");
   const footer = document.createElement("footer");
   const top = document.createElement("div");
@@ -12,9 +11,8 @@ export function pageLoad() {
   const logo = document.createElement("a");
   const yogaBtn = document.createElement("button");
   const sushiBtn = document.createElement("button");
-  const locationsBtn = document.createElement("button");
   const reservationLink = document.createElement("a");
-  const tabBtns = [yogaBtn, sushiBtn, locationsBtn];
+  const tabBtns = [yogaBtn, sushiBtn];
   reservationLink.innerText = "Reserve A Mat";
 
   top.classList.add("top");
@@ -27,18 +25,23 @@ export function pageLoad() {
 
   yogaBtn.innerText = "Yoga";
   sushiBtn.innerText = "Sushi";
-  locationsBtn.innerText = "Locations";
+
+  function removeUnderline() {
+    document
+      .querySelectorAll("button")
+      .forEach((b) => b.classList.remove("active"));
+  }
 
   tabBtns.forEach((btn) =>
     btn.addEventListener("click", function () {
-      document
-        .querySelectorAll("button")
-        .forEach((b) => b.classList.remove("active"));
+      removeUnderline();
       btn.classList.add("active");
     })
   );
 
   logo.addEventListener("click", function () {
+    removeUnderline();
+    middle.innerHTML = "";
     middle.classList.add("middle-img");
   });
 
@@ -54,17 +57,10 @@ export function pageLoad() {
     sushiToggle(middle);
   });
 
-  locationsBtn.addEventListener("click", function () {
-    middle.classList.remove("middle-img");
-    middle.classList.add("showLocations");
-    locationsToggle(middle);
-  });
-
   footer.innerHTML = "&#169 2022 Yogushi Group";
 
   btnRow.appendChild(yogaBtn);
   btnRow.appendChild(sushiBtn);
-  btnRow.appendChild(locationsBtn);
 
   header.appendChild(logo);
   header.appendChild(btnRow);

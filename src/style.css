@@ -39,6 +39,28 @@ a:hover {
   text-decoration: underline;
 }
 
+header a:hover {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  letter-spacing: 1px;
+  font-size: 0.6rem;
+  table-layout: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+td,
+th {
+  border: 1px solid rgb(190, 190, 190);
+  padding: 10px 20px;
+  text-align: center;
+  width: 20%;
+}
+
 .active {
   text-decoration: underline;
 }
@@ -57,10 +79,12 @@ a:hover {
 }
 
 .middle-space {
-  /* background-color: rgb(189, 197, 197); */
   background-size: cover;
   background-position: 35%;
   min-height: 30em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bottom {
@@ -70,4 +94,21 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.table-div {
+  width: 50%;
+}
+
+.yoga-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: pre-wrap;
+}
+
+.table-head {
+  border: 1px solid rgb(197, 72, 72);
+  background-color: rgb(197, 72, 72);
+  color: white;
 }
