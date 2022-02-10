@@ -54,12 +54,12 @@ export function sushiToggle(div) {
     div.innerHTML = "";
     const menuDiv = document.createElement("div");
     const menuItems = [
-      "<h3>Sashimi, $15 per serving</h3>",
-      "<h3>Nigri, $12 per serving</h3>",
-      "<h3>Octopus, $18 per serving</h3>",
-      "<h3>Salmon, $12 per serving</h3>",
-      "<h3>Scallops, $13 per serving</h3>",
-      "<h3>Yellowtail, $7 per serving</h3>",
+      "<h3>Nigri</h3> $12 per serving",
+      "<h3>Octopus</h3> $18 per serving",
+      "<h3>Salmon</h3> $12 per serving",
+      "<h3>Sashimi</h3> $15 per serving",
+      "<h3>Scallops</h3> $13 per serving",
+      "<h3>Yellowtail</h3> $7 per serving",
     ];
 
     menuItems.forEach(function (el) {
